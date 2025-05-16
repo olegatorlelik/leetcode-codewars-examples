@@ -4,12 +4,15 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const rotateArray = (nums, k) => {
-  if (k <= 0) {
-    return;
-  }
+  if (k <= 0) return;
 
-  const tail = nums.splice(-k);
-  nums.splice(0, 0, ...tail);
+  let restSteps = k;
+
+  while (restSteps > 0) {
+    const lastElement = nums.pop();      // O(1)
+    nums.unshift(lastElement);           // O(n) → shifting all elements
+    restSteps--;
+  }
 };
 
 /**
