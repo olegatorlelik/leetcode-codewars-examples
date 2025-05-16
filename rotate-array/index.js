@@ -9,8 +9,8 @@ const rotateArray = (nums, k) => {
   let restSteps = k;
 
   while (restSteps > 0) {
-    const lastElement = nums.pop();      // O(1)
-    nums.unshift(lastElement);           // O(n) → shifting all elements
+    const lastElement = nums.pop();
+    nums.unshift(lastElement);
     restSteps--;
   }
 };
@@ -37,7 +37,7 @@ const rotateArrayBestPractice = (nums, k) => {
     reverse(0, k - 1);       // Reverse first k elements
     reverse(k, n - 1);       // Reverse remaining elements
   }
-}
+};
 
 rotateArray([1, 2], 3);
 
