@@ -5,15 +5,14 @@
  */
 const foo = (ransomNote, magazine) => {
   let step = 0;
-  let copyOfMagazine = magazine;
   let result = false;
 
   while (step < ransomNote.length) {
     const currentLetter = ransomNote[step];
 
-    if (copyOfMagazine.includes(currentLetter)) {
+    if (magazine.includes(currentLetter)) {
       step = step + 1;
-      copyOfMagazine = copyOfMagazine.replace(currentLetter, '');
+      magazine.replace(currentLetter, '');
       result = true;
 
       continue;
