@@ -13,7 +13,6 @@ const foo = (prices) => {
       break;
     }
 
-
     if (currentPrice > nextPrice) {
       continue;
     }
