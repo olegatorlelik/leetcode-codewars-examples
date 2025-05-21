@@ -1,3 +1,5 @@
-Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-You must implement a solution with a linear runtime complexity and use only constant extra space.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.

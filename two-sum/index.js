@@ -1,13 +1,22 @@
 /**
  * @param {number[]} nums
- * @return {number}
+ * @param {number} target
+ * @return {number[]}
  */
-const singleNumber = (nums) => {
-  let res = 0;
+const twoSum = (nums, target) => {
+  const obj = {};
 
-  for (const num of nums) {
-    res = res ^ num;
+  for (let i = 0; i < nums.length; i++) {
+    const x = target - nums[i];
+
+    if (typeof obj[x] === 'undefined') {
+      obj[nums[i]] = i;
+
+      continue;
+    }
+
+    return [obj[x], i];
   }
-
-  return res;
 };
+
+console.log({ res: twoSum([2, 7, 11, 15], 9) });
